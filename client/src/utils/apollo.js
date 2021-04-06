@@ -1,6 +1,6 @@
 import ApolloClient from 'apollo-client';
-import { HttpLink, InMemoryCache } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import { HttpLink, InMemoryCache } from '@apollo/client';
 
 const authLink = setContext((_, { headers }) => {
   const token = sessionStorage.getItem('id');
